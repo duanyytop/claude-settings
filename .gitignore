@@ -1,0 +1,40 @@
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Local settings (may contain sensitive data)
+config/settings.local.json
+settings.local.json
+
+# Logs
+*.log
+*.log.bak
+
+# Backup files
+*.bak
+*~
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Temporary files
+*.tmp
+*.temp
+
+# Node modules (if any scripts use npm)
+node_modules/
+
+# Secrets and credentials (never commit these)
+.env
+.env.*
+!.env.example
+secrets/
+credentials.json
+*.pem
+*.key
+*.p12
+*.pfx

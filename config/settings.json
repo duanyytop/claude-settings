@@ -1,17 +1,4 @@
 {
-  "model": "sonnet",
-  "enabledPlugins": {
-    "typescript-lsp@claude-plugins-official": true,
-    "pyright-lsp@claude-plugins-official": true,
-    "gopls-lsp@claude-plugins-official": true,
-    "context7@claude-plugins-official": true,
-    "github@claude-plugins-official": true,
-    "frontend-design@claude-plugins-official": true,
-    "commit-commands@claude-plugins-official": true,
-    "ralph-wiggum@claude-plugins-official": true
-  },
-  "enableAllProjectMcpServers": true,
-  "enabledMcpjsonServers": ["*"],
   "permissions": {
     "allow": [
       "Read:**/*",
@@ -162,7 +149,25 @@
       "Bash(unzip:*)",
       "Bash(zip:*)",
       "Bash(gzip:*)",
-      "Bash(gunzip:*)"
+      "Bash(gunzip:*)",
+      "Bash(git status)",
+      "Bash(git diff:*)",
+      "Bash(git log:*)",
+      "Bash(git add:*)",
+      "Bash(git commit:*)",
+      "Bash(git checkout:*)",
+      "Bash(git branch:*)",
+      "Bash(gh pr:*)",
+      "Bash(pwd)",
+      "Edit:**/.env*",
+      "WebFetch",
+      "WebSearch",
+      "Bash(xargs:*)",
+      "Bash(test:*)",
+      "Bash(~/.claude/scripts/notify.sh:*)",
+      "Bash(~/.claude/scripts/task-summary.sh)",
+      "Bash(~/.claude/scripts/view-logs.sh)",
+      "Bash(~/.claude/scripts/setup-aliases.sh)"
     ],
     "deny": [
       "Write(.env.local)",
@@ -192,7 +197,45 @@
       "Bash(docker push:*)",
       "Bash(kubectl delete:*)",
       "Bash(git push --force:*)",
-      "Bash(git push -f:*)"
+      "Bash(git push -f:*)",
+      "Read:**/.env.local",
+      "Bash(sudo:*)",
+      "Bash(chmod 777:*)",
+      "Bash(rm -rf /*)",
+      "Bash(rm -rf ~/*)",
+      "Bash(git push --force origin pre)",
+      "Bash(git push --force origin master)",
+      "Bash(git push --force origin dev)",
+      "Bash(git push -f origin pre)",
+      "Bash(git push -f origin master)",
+      "Bash(git push -f origin dev)",
+      "Bash(npm install -g:*)",
+      "Bash(yarn global add:*)"
+    ],
+    "defaultMode": "default"
+  },
+  "enableAllProjectMcpServers": true,
+  "enabledMcpjsonServers": ["*"],
+  "hooks": {
+    "SessionStart": [
+      {
+        "matcher": "*",
+        "hooks": [
+          {
+            "type": "prompt",
+            "prompt": "CRITICAL LANGUAGE RULE: When the user communicates in Chinese, you MUST always respond in English. When the user communicates in English, you MUST respond in English. Always respond in English regardless of the user's input language."
+          }
+        ]
+      }
     ]
+  },
+  "enabledPlugins": {
+    "typescript-lsp@claude-plugins-official": true,
+    "pyright-lsp@claude-plugins-official": true,
+    "gopls-lsp@claude-plugins-official": true,
+    "context7@claude-plugins-official": true,
+    "github@claude-plugins-official": true,
+    "frontend-design@claude-plugins-official": true,
+    "commit-commands@claude-plugins-official": true
   }
 }

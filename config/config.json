@@ -1,0 +1,16 @@
+{
+  "hooks": {
+    "task-complete": {
+      "command": "~/.claude/scripts/notify.sh 'Task completed successfully' 'Glass' 'All done!'",
+      "description": "Send notification when task completes successfully"
+    },
+    "task-error": {
+      "command": "~/.claude/scripts/notify.sh 'Task failed with error' 'Basso' 'Error occurred'",
+      "description": "Send notification when task encounters an error"
+    },
+    "task-start": {
+      "command": "~/.claude/scripts/notify.sh 'Task started' 'Ping' 'Working on it...'",
+      "description": "Send notification when task starts"
+    }
+  }
+}
