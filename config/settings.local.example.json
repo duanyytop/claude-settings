@@ -1,11 +1,22 @@
 {
   "permissions": {
     "allow": [
-      "WebFetch(domain:github.com)",
-      "Bash(ls:*)",
-      "Bash(git clone:*)",
-      "Bash(find:*)"
+      "mcp__figma-dev-mode-mcp-server__get_design_context",
+      "mcp__figma-dev-mode-mcp-server__get_screenshot",
+      "mcp__figma-dev-mode-mcp-server__get_metadata",
+      "Bash(npx tsc:*)",
+      "Bash(npx prettier:*)",
+      "Bash(claude plugin install:*)",
+      "Bash(claude plugin search:*)",
+      "Bash(claude plugin --help:*)"
     ],
-    "deny": []
+    "deny": [],
+    "additionalDirectories": [
+      "/path/to/your/project1",
+      "/path/to/your/project2"
+    ]
+  },
+  "enabledPlugins": {
+    "greptile@claude-plugins-official": false
   }
 }

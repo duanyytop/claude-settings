@@ -76,6 +76,72 @@ Provides:
 - `/commit-push-pr` - Commit, push, and create PR
 - `/clean_gone` - Clean up deleted branches
 
+### Code Quality & Review Tools
+
+#### Code Review
+```json
+"code-review@claude-plugins-official": true
+```
+Provides:
+- `/code-review` - Code review a pull request
+- Quality and style analysis
+- Security vulnerability detection
+- Best practices verification
+- Bug identification
+
+#### PR Review Toolkit
+```json
+"pr-review-toolkit@claude-plugins-official": true
+```
+Provides:
+- `/review-pr` - Comprehensive multi-agent PR review
+- Code quality analysis
+- Test coverage validation
+- Type design review
+- Silent failure detection
+- Comment accuracy verification
+
+#### Code Simplifier
+```json
+"code-simplifier@claude-plugins-official": true
+```
+Provides:
+- Code refactoring for clarity
+- Consistency improvements
+- Maintainability enhancements
+- Preserves all functionality
+
+#### Security Guidance
+```json
+"security-guidance@claude-plugins-official": true
+```
+Provides:
+- Security best practices
+- Vulnerability detection
+- Secure coding patterns
+- OWASP compliance checks
+
+### Advanced Tools
+
+#### Ralph Wiggum
+```json
+"ralph-wiggum@claude-plugins-official": true
+```
+Provides:
+- Enhanced debugging capabilities
+- Advanced error analysis
+- Code pattern detection
+
+#### Greptile (Project-Specific)
+```json
+"greptile@claude-plugins-official": true
+```
+Provides:
+- Codebase indexing and search
+- Semantic code search
+- Context-aware code navigation
+- Used in Monday DApp project
+
 ## MCP Servers
 
 ### Enable All Project MCP Servers

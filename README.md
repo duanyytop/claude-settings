@@ -17,10 +17,15 @@ claude-settings/
 │   ├── clear-logs.sh            # Log cleanup utility
 │   ├── setup-aliases.sh         # Shell aliases setup
 │   └── install.sh               # Configuration installer
+├── skills/
+│   ├── react-best-practices/    # React/Next.js performance optimization
+│   ├── fix-pr-comments/         # GitHub PR comment fixes
+│   └── generate-pr-description/ # Auto-generate PR descriptions
 ├── docs/
 │   ├── NOTIFICATION.md          # Notification system docs
 │   ├── PERMISSIONS.md           # Permission rules reference
-│   └── PLUGINS.md               # Plugin configuration guide
+│   ├── PLUGINS.md               # Plugin configuration guide
+│   └── SKILLS.md                # Skills and slash commands reference
 └── README.md
 ```
 
@@ -80,13 +85,41 @@ Pre-configured safe permissions:
 
 ### Enabled Plugins
 
+**Language Servers:**
 - `typescript-lsp` - TypeScript language server
 - `pyright-lsp` - Python type checker
 - `gopls-lsp` - Go language server
+
+**Development Tools:**
 - `context7` - Documentation lookup
 - `github` - GitHub integration
 - `frontend-design` - UI/UX design tools
 - `commit-commands` - Git commit helpers
+
+**Code Quality & Review:**
+- `code-review` - PR code review
+- `pr-review-toolkit` - Multi-agent PR review
+- `code-simplifier` - Code refactoring
+- `security-guidance` - Security best practices
+- `ralph-wiggum` - Enhanced debugging
+
+**Project-Specific:**
+- `greptile` - Codebase search (Monday DApp)
+
+See [PLUGINS.md](./docs/PLUGINS.md) for detailed plugin documentation.
+
+## Custom Skills
+
+Custom slash commands for specialized workflows:
+
+**Global Skills:**
+- `/react-best-practices` - React/Next.js performance optimization (40+ rules)
+
+**Project Skills (Monday DApp):**
+- `/fix-pr-comments [PR-number]` - Fetch and fix PR review comments
+- `/generate-pr-description` - Auto-generate PR descriptions
+
+See [SKILLS.md](./docs/SKILLS.md) for detailed skill documentation.
 
 ## Shell Aliases
 
